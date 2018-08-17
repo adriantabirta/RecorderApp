@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onDeleteTap(sender: UIButton) {
-        // record, play stop
+        // delete saved file
     }
 }
 
