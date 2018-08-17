@@ -13,6 +13,10 @@
 		BA1004902125ED45009572D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA10048F2125ED45009572D6 /* Assets.xcassets */; };
 		BA1004932125ED45009572D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1004912125ED45009572D6 /* LaunchScreen.storyboard */; };
 		BABD25062126C97900E30C98 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD25052126C97900E30C98 /* RecordButton.swift */; };
+		BABD250B2126D3A900E30C98 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD250A2126D3A900E30C98 /* Alert.swift */; };
+		BABD250E2126D4F300E30C98 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD250D2126D4F300E30C98 /* UIApplication.swift */; };
+		BABD2512212703EE00E30C98 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD2511212703EE00E30C98 /* AudioRecorder.swift */; };
+		BABD251421271A9500E30C98 /* NSTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD251321271A9500E30C98 /* NSTimeInterval.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		BA1004922125ED45009572D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA1004942125ED45009572D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BABD25052126C97900E30C98 /* RecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
+		BABD250A2126D3A900E30C98 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		BABD250D2126D4F300E30C98 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		BABD2511212703EE00E30C98 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		BABD251321271A9500E30C98 /* NSTimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTimeInterval.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,8 @@
 				BA1004882125ED43009572D6 /* AppDelegate.swift */,
 				BA10048A2125ED43009572D6 /* ViewController.swift */,
 				BA10048C2125ED43009572D6 /* Main.storyboard */,
+				BABD250C2126D4D800E30C98 /* Extrensions */,
+				BABD25072126CF8400E30C98 /* Helpers */,
 				BABD25042126C94200E30C98 /* UI */,
 				BA10048F2125ED45009572D6 /* Assets.xcassets */,
 				BA1004912125ED45009572D6 /* LaunchScreen.storyboard */,
@@ -71,8 +81,26 @@
 			isa = PBXGroup;
 			children = (
 				BABD25052126C97900E30C98 /* RecordButton.swift */,
+				BABD250A2126D3A900E30C98 /* Alert.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		BABD25072126CF8400E30C98 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BABD2511212703EE00E30C98 /* AudioRecorder.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BABD250C2126D4D800E30C98 /* Extrensions */ = {
+			isa = PBXGroup;
+			children = (
+				BABD250D2126D4F300E30C98 /* UIApplication.swift */,
+				BABD251321271A9500E30C98 /* NSTimeInterval.swift */,
+			);
+			path = Extrensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BABD250E2126D4F300E30C98 /* UIApplication.swift in Sources */,
+				BABD2512212703EE00E30C98 /* AudioRecorder.swift in Sources */,
 				BA10048B2125ED43009572D6 /* ViewController.swift in Sources */,
 				BA1004892125ED43009572D6 /* AppDelegate.swift in Sources */,
+				BABD251421271A9500E30C98 /* NSTimeInterval.swift in Sources */,
+				BABD250B2126D3A900E30C98 /* Alert.swift in Sources */,
 				BABD25062126C97900E30C98 /* RecordButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,10 +331,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.adriantabirta.RecorderApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adriantabirta.RecorderAppp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,10 +349,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.adriantabirta.RecorderApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adriantabirta.RecorderAppp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

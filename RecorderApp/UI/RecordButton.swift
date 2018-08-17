@@ -22,7 +22,8 @@ class RecordButton: UIButton {
     
     private func setup() {
         backgroundColor = UIColor(red: 255/255, green: 91/255, blue: 119/255, alpha: 1)
-        setTitle("", for: .normal)
+        titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        titleLabel?.textColor = .white
         layer.cornerRadius = self.frame.width * 0.5
         layer.masksToBounds = true
     }
