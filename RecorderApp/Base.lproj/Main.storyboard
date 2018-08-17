@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,63 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RecorderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpX-8d-Kfl" customClass="RecordButton" customModule="RecorderApp" customModuleProvider="target">
+                                <rect key="frame" x="147" y="487" width="80" height="80"/>
+                                <color key="backgroundColor" red="1" green="0.35650373943306857" blue="0.46635529805693032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qpX-8d-Kfl" secondAttribute="height" multiplier="1:1" id="H6h-xZ-meO"/>
+                                    <constraint firstAttribute="width" constant="80" id="cJd-3H-uR9"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="onActionTapWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sb7-3s-Eeg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sm3-ru-jnY">
+                                <rect key="frame" x="146.5" y="70" width="83.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obf-il-Bjt">
+                                <rect key="frame" x="262" y="502" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Obf-il-Bjt" secondAttribute="height" multiplier="1:1" id="CBm-eE-G6w"/>
+                                    <constraint firstAttribute="width" constant="50" id="KN1-zj-NRl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onDeleteTapWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aVZ-4N-LIz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qpX-8d-Kfl" secondAttribute="bottom" constant="100" id="F5v-Ie-4UF"/>
+                            <constraint firstItem="Obf-il-Bjt" firstAttribute="centerY" secondItem="qpX-8d-Kfl" secondAttribute="centerY" id="a9q-NV-VvJ"/>
+                            <constraint firstItem="qpX-8d-Kfl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oi9-4N-D6W"/>
+                            <constraint firstItem="sm3-ru-jnY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="opa-N7-fEe"/>
+                            <constraint firstItem="sm3-ru-jnY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="so6-iL-kJ5"/>
+                            <constraint firstItem="Obf-il-Bjt" firstAttribute="leading" secondItem="qpX-8d-Kfl" secondAttribute="trailing" constant="35" id="yfr-f2-xXW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="actionButton" destination="qpX-8d-Kfl" id="wzv-lD-0KQ"/>
+                        <outlet property="deleteButton" destination="Obf-il-Bjt" id="bCO-JJ-zrc"/>
+                        <outlet property="timeLabel" destination="sm3-ru-jnY" id="MWG-Jt-LTA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-295" y="18"/>
         </scene>
     </scenes>
 </document>

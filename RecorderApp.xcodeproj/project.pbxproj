@@ -12,6 +12,7 @@
 		BA10048E2125ED43009572D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA10048C2125ED43009572D6 /* Main.storyboard */; };
 		BA1004902125ED45009572D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA10048F2125ED45009572D6 /* Assets.xcassets */; };
 		BA1004932125ED45009572D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA1004912125ED45009572D6 /* LaunchScreen.storyboard */; };
+		BABD25062126C97900E30C98 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD25052126C97900E30C98 /* RecordButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		BA10048F2125ED45009572D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA1004922125ED45009572D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA1004942125ED45009572D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BABD25052126C97900E30C98 /* RecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +59,20 @@
 				BA1004882125ED43009572D6 /* AppDelegate.swift */,
 				BA10048A2125ED43009572D6 /* ViewController.swift */,
 				BA10048C2125ED43009572D6 /* Main.storyboard */,
+				BABD25042126C94200E30C98 /* UI */,
 				BA10048F2125ED45009572D6 /* Assets.xcassets */,
 				BA1004912125ED45009572D6 /* LaunchScreen.storyboard */,
 				BA1004942125ED45009572D6 /* Info.plist */,
 			);
 			path = RecorderApp;
+			sourceTree = "<group>";
+		};
+		BABD25042126C94200E30C98 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BABD25052126C97900E30C98 /* RecordButton.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			files = (
 				BA10048B2125ED43009572D6 /* ViewController.swift in Sources */,
 				BA1004892125ED43009572D6 /* AppDelegate.swift in Sources */,
+				BABD25062126C97900E30C98 /* RecordButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
